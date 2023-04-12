@@ -8,9 +8,7 @@ use App\Http\Controllers\CarrinhoController;
 
 
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [ProdutoController::class,'index']);
 
 Route::get('/carrinho/{produto}',[CarrinhoController::class, 'store'])->name('carrinho.store');
 Route::get('/carrinho',[CarrinhoController::class,'index'])->name('carrinho.index');

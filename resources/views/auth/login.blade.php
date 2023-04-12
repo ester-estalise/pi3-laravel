@@ -48,9 +48,10 @@
                                             </div>
                                         </div>
                                         <button type="submit" class="ml-3">Login</button>
+                                        <a href="{{route('register')}}">Cadastre-se</a>
                                     </form>
-                               
-                                   
+
+
                                 </div>
                             </div>
                         </div>
@@ -61,11 +62,10 @@
 
         </div>
 
- 
+
 
 
 
 </body>
 </html>
- 
-    
+

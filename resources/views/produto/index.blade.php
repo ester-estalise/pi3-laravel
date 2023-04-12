@@ -22,30 +22,62 @@
         <a href="./">
           <img src="/img/logo (1).png" width="100" height="50" alt="">
         </a>
-      
+
         <nav aria-label="primaria">
           <ul class="header-menu font-1-m cor-0">
             <li><a href="./teclas.html">Teclas</a></li>
             <li><a href=".//cordas.html">Cordas</a></li>
             <li><a href="./audio.html">Audio</a></li>
             <li><a href="./contato.html">Contato</a></li>
-            <li><a href="/register"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-cart2" viewBox="0 0 16 16">
-              <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"/>
-            </svg></a></li>
+            <!--barra de pesquisa-->
             <form class="form-inline my-2 my-lg-0">
               <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
-              <button type="button" class="btn btn-light">Pesquisar</button>
             </form>
-            <li><a href="./"></a><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-person-fill-add" viewBox="0 0 16 16">
-              <path d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Zm.5-5v1h1a.5.5 0 0 1 0 1h-1v1a.5.5 0 0 1-1 0v-1h-1a.5.5 0 0 1 0-1h1v-1a.5.5 0 0 1 1 0Zm-2-6a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/>
-              <path d="M2 13c0 1 1 1 1 1h5.256A4.493 4.493 0 0 1 8 12.5a4.49 4.49 0 0 1 1.544-3.393C9.077 9.038 8.564 9 8 9c-5 0-6 3-6 4Z"/>
-            </svg>
-          </li>
+@if(!Auth::check())
+  <div class="dropdown">
+                <a href ="{{route('login')}}"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="25" fill="currentColor" class="bi bi-person-fill-add" viewBox="0 0 16 16">
+  <path d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Zm.5-5v1h1a.5.5 0 0 1 0 1h-1v1a.5.5 0 0 1-1 0v-1h-1a.5.5 0 0 1 0-1h1v-1a.5.5 0 0 1 1 0Zm-2-6a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/>
+  <path d="M2 13c0 1 1 1 1 1h5.256A4.493 4.493 0 0 1 8 12.5a4.49 4.49 0 0 1 1.544-3.393C9.077 9.038 8.564 9 8 9c-5 0-6 3-6 4Z"/>
+</svg></a>
+        </div>
+
+        @else
+        <div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+   Sair
+  </button>
+  <ul class="dropdown-menu">
+    <form method="POST" action="{{ route('logout') }}">
+                            @csrf
+
+                            <a class="dropdown-item" href="route('logout')"
+                                    onclick="event.preventDefault();
+                                                this.closest('form').submit();">
+                                sair
+                            </a>
+                        </form>
+
+  </ul>
+</div>
+
+
+        @endif
+
+          @if(Auth::check())
+            <li><a href="./"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-cart2" viewBox="0 0 16 16">
+              <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"/>
+            </svg></a></li>
+
+            <li>Olá {{Auth::user()->USUARIO_NOME}}</li>
+            @endif
           </ul>
+
+
         </nav>
+
       </div>
     </header>
-  
+
 
   <main class="introducao-bg">
     <div class="introducao container">
@@ -53,7 +85,7 @@
         <h1 class="font-1-xxl cor-0">Instrumentos de primeira linha para você<span class="cor-p1">.</span></h1>
         <p class="font-2-l cor-5">Só aqui na ECHO você encontra os melhores instrumentos para sua banda, ou para curtir um Karaokê com a família.
         </p>
-     
+
       </div>
       <picture>
         <source media="(max-width: 800px)" srcset="./img/bicicletas/nimbus.jpg">
@@ -70,7 +102,7 @@
         <a href="./cordas.html">
           <img src="./img/cordas/guitarra.jpg" alt="Bicicleta preta" width="700" height="750">
           <h3 class="font-1-xl">Cordas</h3>
-       
+
         </a>
       </li>
       <li>
@@ -104,7 +136,7 @@
             <img src="/img/bicicleta/guitarra.jpg" alt="Bicicleta preta" width="700" height="750">
           @endif
           <h3 class="font-1-xl">{{$produto->PRODUTO_NOME}}</h3>
-        
+
           <span class="font-2-m cor-8">R$ 4999</span>
         </a>
       </li>
@@ -136,7 +168,7 @@
           <img src="./img/teclas/orgao.jpg" alt="Bicicleta preta" width="700" height="750">
           <h3 class="font-1-xl">Orgão</h3>
           <span class="font-2-m cor-8">R$ 4999</span>
-       
+
         </a>
       </li>
       <li>
@@ -182,7 +214,7 @@
     </ul>
   </article>
 
-  
+
 
   <section class="depoimento" aria-label="Depoimento">
     <div>
