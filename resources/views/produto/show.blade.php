@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Teclado</title>
+  <title>PRODUTO</title>
   <meta name="description" content="Nebula.">
 
   <link rel="preload" href="/css/style.css" as="style">
@@ -16,10 +16,10 @@
   <body>
     <header class="header-bg">
       <div class="header container">
-        <a href="./">
-          <img src="./img/logo(1).png" width="200" height="32" alt="Bikcraft">
+      <a href="./">
+          <img src="/img/logo (1).png" width="100" height="50" alt="logo">
         </a>
-  
+
         <nav aria-label="primaria">
           <ul class="header-menu font-1-m cor-0">
             <li><a href="./teclas.html">Teclas</a></li>
@@ -33,12 +33,12 @@
         </nav>
       </div>
     </header>
-  
+
 
   <main class="titulo-bg">
     <div>
       <div class="titulo container">
-       
+
         <h1 class="font-1-xxl cor-0">{{$produto->PRODUTO_NOME}}<span class="cor-p1">.</span></h1>
       </div>
     </div>
@@ -48,21 +48,25 @@
           <!--<p>{{$imagem->IMAGEM_URL}}</p>-->
           <img src="{{$imagem->IMAGEM_URL}}">
           @endforeach
-         
+
 
       </div>
       <div class="bicicleta-conteudo">
-      <p class="font-2-xl cor-5">R${{$produto->PRODUTO_PRECO - $produto->PRODUTO_DESCONTO}}</p>
+      <p class="font-2-xl cor-1" > R${{$produto->PRODUTO_PRECO - $produto->PRODUTO_DESCONTO}}</p>
 
-        <p class="font-2-xl cor-0"><p>{{$produto->PRODUTO_DESC}}</p>
+        <p class="font-2-xl cor-1"><p>{{$produto->PRODUTO_DESC}}</p>
         <div class="bicicleta-comprar">
-          <a class="botao" href="../orcamento.html">Comprar Agora</a>
+          <a class="botao" href="./">Comprar Agora</a>
           <span class="font-1-xs cor-6"><img src="../img/icones/entrega.svg" alt=""> entrega em 5 dias</span>
+          @if($produto->ProdutoEstoque)
           <span class="font-1-xs cor-6"><img src="../img/icones/estoque.svg" alt=""> {{$produto->ProdutoEstoque->PRODUTO_QTD}}</span>
+          @else
+          <span class="font-1-xs cor-6"><img src="../img/icones/estoque.svg" alt="">sem estoque</span>
+          @endif
 
         </div>
 
-      
+
   </main>
 
 
@@ -87,7 +91,7 @@
     </ul>
   </article>
 
-  
+
 
   <footer class="footer-bg">
     <div class="footer container">

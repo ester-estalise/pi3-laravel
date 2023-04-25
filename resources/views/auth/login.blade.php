@@ -1,71 +1,67 @@
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="/css/login/sb-admin-2.css" rel="stylesheet">
-    <title>Document</title>
-</head>
-<body>
-        <!-- Outer Row -->
-        <div class="row justify-content-center">
+  <head>
+  	<title>Login 05</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-            <div class="col-xl-10 col-lg-12 col-md-9">
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
 
-                <div class="card o-hidden border-0 shadow-lg my-5">
-                    <div class="card-body p-0">
-                        <!-- Nested Row within Card Body -->
-                        <div class="row">
-                            <div class="col-lg-6 d-none d-lg-block bg-login-image"></div>
-                            <div class="col-lg-6">
-                                <div class="p-5">
-                                    <div class="text-center">
-                                        <h1 class="h4 text-gray-900 mb-4">Login</h1>
-                                    </div>
-                                    <form method="POST" class="user"  action="{{route('login')}}">
-                                        @csrf
-                                    <div class="mt-4">
-            <x-input-label for="email" :value="__('Email:')" />
-            <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autocomplete="username" />
-            <x-input-error :messages="$errors->get('email')" class="mt-2" />
-        </div>
-        <div class="mt-4">
-            <x-input-label for="password" :value="__('Senha:')" />
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-            <x-text-input id="password" class="block mt-1 w-full"
-                            type="password"
+	<link rel="stylesheet" href="/css-login2/style.css">
+
+	</head>
+	<body>
+	<section class="ftco-section">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-6 text-center mb-5">
+					<h2 class="heading-section">Login </h2>
+				</div>
+			</div>
+			<div class="row justify-content-center">
+				<div class="col-md-7 col-lg-5">
+					<div class="wrap">
+						<div class="img" style="background-image: url(/img/logo.png);"></div>
+						<div class="login-wrap p-4 p-md-5">
+
+							<form   method="POST" class="user"  action="{{route('login')}}">
+                                @csrf
+			      		<div class="form-group mt-3">
+			      			<input   id="email" type="text"  type="email" name="email" :value="old('email')" required autocomplete="username" class="form-control" required>
+			      			<label class="form-control-placeholder" for="email" :value="__('Email:')" style="color:#703f2a">Email</label>
+
+			      		</div>
+		            <div class="form-group">
+		              <input id="password-field"     type="password"
                             name="password"
-                            required autocomplete="new-password" />
+                            required autocomplete="new-password" class="form-control" required autocomplete="new-password" >
+		              <label class="form-control-placeholder" for="password" :value="__('Senha:')"  style="color:#703f2a">Senha</label>
+		              <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
 
-            <x-input-error :messages="$errors->get('Senha:')" class="mt-2" />
-</div>
-                                        <div class="form-group">
-                                            <div class="custom-control custom-checkbox small">
-                                                <input type="checkbox" class="custom-control-input" id="customCheck">
-                                                <label class="custom-control-label" for="customCheck">Relembre-me</label>
-                                            </div>
-                                        </div>
-                                        <button type="submit" class="ml-3">Login</button>
-                                        <a href="{{route('register')}}">Cadastre-se</a>
-                                    </form>
+		            </div>
+		            <div class="form-group">
+		            	<button type="submit" class="form-control  rounded submit px-3" style="background-color:#703f2a; color:#ffffff">Entrar</button>
+		            </div>
+                    <a style="color:#703f2a" href="{{route('register')}}">Cadastre-se</a>
+		            <div   class="form-group d-md-flex">
 
+		            </div>
+		          </form>
 
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+		        </div>
+		      </div>
+				</div>
+			</div>
+		</div>
+	</section>
 
-            </div>
+	<script src="js/jquery.min.js"></script>
+  <script src="js/popper.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/main.js"></script>
 
-        </div>
-
-
-
-
-
-</body>
+	</body>
 </html>
-
