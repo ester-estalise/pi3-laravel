@@ -29,7 +29,7 @@
 
 							<form   method="POST" class="user"  action="{{route('login')}}">
                                 @csrf
-			      		<div class="form-group mt-3">
+			      		<div   style="color:#703f2a" class="form-group mt-3">
 			      			<input   id="email" type="text"  type="email" name="email" :value="old('email')" required autocomplete="username" class="form-control" required>
 			      			<label class="form-control-placeholder" for="email" :value="__('Email:')" style="color:#703f2a">Email</label>
 
