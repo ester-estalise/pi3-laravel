@@ -7,7 +7,7 @@
 
   <title>PRODUTO</title>
   <meta name="description" content="Nebula.">
-
+  <link rel="icon"  href="img/logo.png"/>
   <link rel="preload" href="/css/style.css" as="style">
   <link rel="stylesheet" href="/css/style.css">
 </head>
@@ -17,7 +17,7 @@
     <header class="header-bg">
       <div class="header container">
       <a href="./">
-          <img src="/img/logo (1).png" width="100" height="50" alt="logo">
+          <img src="/img/logo.png" width="100" height="50" alt="logo">
         </a>
 
         <nav aria-label="primaria">
@@ -95,39 +95,43 @@
 
   <footer class="footer-bg">
     <div class="footer container">
-      <img src="../img/logocerto.png" width="136" height="32" alt="Bikcraft">
+    <img src="/img/logo.png" width="100" height="50" alt="logo">
       <div class="footer-contato">
-        <h3 class="font-2-l-b cor-0">Contato</h3>
+        <h3 class="font-2-l-b cor-5">Contato</h3>
         <ul class="font-2-m cor-5">
-          <li><a href="tel:+552199999999">+55 21 9999-9999</a></li>
-          <li><a href="mailto:contato@bikcraft.com">contato@echo.com</a></li>
+          <li><a href="tel:+552199999999 cor-5" style="text-decoration: none;color:aliceblue">+55 11 9999-9999</a></li>
+          <li><a href="mailto:contato@bikcraft.com" style="text-decoration: none;color:aliceblue">contato@echo.com</a></li>
           <li>Rua Ali Perto, 42 - Botafogo</li>
           <li>Rio de Janeiro - RJ</li>
         </ul>
         <div class="footer-redes">
           <a href="./">
-            <img src="../img/redes/instagram.svg" width="32" height="32" alt="Instagram">
+            <img src="/img/redes/instagram.svg" width="32" height="32" alt="Instagram">
           </a>
           <a href="./">
-            <img src="../img/redes/facebook.svg" width="32" height="32" alt="Facebook">
+            <img src="/img/redes/facebook.svg" width="32" height="32" alt="Facebook">
           </a>
           <a href="./">
-            <img src="../img/redes/youtube.svg" width="32" height="32" alt="Youtube">
+            <img src="/img/redes/youtube.svg" width="32" height="32" alt="Youtube">
           </a>
         </div>
       </div>
       <div class="footer-informacoes">
-        <h3 class="font-2-l-b cor-0">Informações</h3>
+        <h3 class="font-2-l-b cor-5">Informações</h3>
         <nav>
           <ul class="font-1-m cor-5">
-            <li><a href="./contato.html">Contato</a></li>
-            <li><a href="./termos.html">Termos e Condições</a></li>
+            <li><a href="./contato.html" style="text-decoration: none;color:aliceblue">Contato</a></li>
+            <li><a href="./termos.html" style="text-decoration: none;color:aliceblue">Termos e Condições</a></li>
           </ul>
         </nav>
       </div>
-      <p class="footer-copy font-2-m cor-6">ECHO © Alguns direitos reservados.</p>
+      <p class="footer-copy font-2-m cor-5" style="text-align: center;">ECHO © Alguns direitos reservados.</p>
     </div>
   </footer>
+</body>
+
+</html>
+
 </body>
 
 </html>

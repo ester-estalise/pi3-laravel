@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-  	<title>Login 05</title>
+  	<title>Registre-se</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -10,7 +10,7 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
 	<link rel="stylesheet" href="/css-login2/style.css">
-
+    <link rel="icon" href="/img/logo.png">
 	</head>
 	<body>
 	<section class="ftco-section">
@@ -32,7 +32,7 @@
                                 <div class="form-group mt-3 ">
                           <div>
 			      			<input  id="name" type="text"  type="name" name="name"  required autofocus autocomplete="name" class="form-control" >
-			      			<label class="form-control-placeholder" for="name">Nome</label>
+			      			<label class="form-control-placeholder" for="name" style="color:#703f2a">Nome</label>
 			      		</div>
 			      		<div class="form-group mt-3">
                           <div>
@@ -45,7 +45,7 @@
                             name="password"
                             required autocomplete="new-password" class="form-control" required autocomplete="new-password" >
 		              <label class="form-control-placeholder" for="password"  style="color:#703f2a">Senha</label>
-		              <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+		              <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password" style="color:#703f2a"></span>
 		            </div>
 
                     <div class="form-group mt-3 ">

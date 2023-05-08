@@ -10,7 +10,7 @@
 
   <link rel="preload" href="./css/style.css" as="style">
   <link rel="stylesheet" href="./css/style.css">
-  <link rel="icon" type="image/png" href="img/logo cortado.png"/>
+  <link rel="icon"  href="img/logo.png"/>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </head>
@@ -47,9 +47,10 @@
         @endif
 
           @if(Auth::check())
-            <li><a href="./"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-cart2" viewBox="0 0 16 16">
+
+            <li><a href="/resources/views/carrinho/index.blade.php"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-cart2" viewBox="0 0 16 16">
               <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"/>
-            </svg></a></li>
+            </svg> </a></li>
 
             <li>Olá {{Auth::user()->USUARIO_NOME}}
             <form method="POST" action="{{ route('logout') }}">
@@ -75,7 +76,7 @@
 @yield('main')
 <footer class="footer-bg">
     <div class="footer container">
-    <img src="/img/logo (1).png" width="100" height="50" alt="logo">
+    <img src="/img/logo.png" width="100" height="50" alt="logo">
       <div class="footer-contato">
         <h3 class="font-2-l-b cor-5">Contato</h3>
         <ul class="font-2-m cor-5">
@@ -105,7 +106,7 @@
           </ul>
         </nav>
       </div>
-      <p class="footer-copy font-2-m cor-6">ECHO © Alguns direitos reservados.</p>
+      <p class="footer-copy font-2-m cor-5" style="text-align: center;">ECHO © Alguns direitos reservados.</p>
     </div>
   </footer>
 </body>
