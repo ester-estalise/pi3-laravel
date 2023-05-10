@@ -24,4 +24,12 @@ class Produto extends Model
     public function Categoria(){
         return $this->belongsTo(Categoria::class, 'CATEGORIA_ID','CATEGORIA_ID');
     }
+
+    public function getImagem() {
+        if (count($this->ProdutoImagem) === 0) {
+            return "https://triunfo.pe.gov.br/pm_tr430/wp-content/uploads/2018/03/sem-foto.jpg";
+        } else {
+            return $this->ProdutoImagem[0]->IMAGEM_URL;
+        }
+    }
 }

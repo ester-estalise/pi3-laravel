@@ -10,7 +10,8 @@ use App\Http\Controllers\CarrinhoController;
 
 Route::get('/', [ProdutoController::class,'index']);
 
-Route::get('/carrinho/{produto}',[CarrinhoController::class, 'store'])->name('carrinho.store');
+
+Route::post('/carrinho/{produto}',[CarrinhoController::class, 'store'])->name('carrinho.store');
 Route::get('/carrinho',[CarrinhoController::class,'index'])->name('carrinho.index');
 
 Route::get('/dashboard', function () {
@@ -28,6 +29,9 @@ Route::middleware('auth')->group(function () {
 
 Route::get('/produto', function () {
     return view('welcome');
+});
+Route::get('/produtos', function () {
+    return view('produto.produtos');
 });
 
 

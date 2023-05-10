@@ -8,16 +8,15 @@
   <title>ECHO</title>
   <meta name="description" content="Bicicletas ">
 
-  <link rel="preload" href="./css/style.css" as="style">
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="preload" href="/css/style.css" as="style">
+  <link rel="stylesheet" href="/css/style.css">
   <link rel="icon"  href="img/logo.png"/>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </head>
 
 <body>
-  <body>
-    <header class="header-bg">
+   <header class="header-bg">
       <div class="header container">
         <a href="./">
           <img src="/img/logo.png" width="100" height="50" alt="logo">
@@ -30,9 +29,11 @@
             <li><a href="./audio.html">Audio</a></li>
             <li><a href="./contato.html">Contato</a></li>
             <!--barra de pesquisa-->
+            <li>
             <form class="form-inline my-2 my-lg-0">
               <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar" class="bi bi-search">
             </form>
+            </li>
            <li> <a href="./"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
   <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
 </svg></a></li>
@@ -76,7 +77,7 @@
 @yield('main')
 <footer class="footer-bg">
     <div class="footer container">
-    <img src="/img/logo.png" width="100" height="50" alt="logo">
+      <img src="/img/logo.png" width="100" height="50" alt="logo">
       <div class="footer-contato">
         <h3 class="font-2-l-b cor-5">Contato</h3>
         <ul class="font-2-m cor-5">
