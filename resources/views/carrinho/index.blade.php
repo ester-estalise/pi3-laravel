@@ -30,20 +30,29 @@
         <h5 class="card-title">{{$item->Produto->PRODUTO_NOME}}</h5>
         <p class="card-text">{{$item->Produto->PRODUTO_DESC}}</p>
         <p class="card-text"><small class="text-muted">R$ {{$item->Produto->PRODUTO_PRECO}}</small></p>
-        @php
-        $total += (double)$item->Produto->PRODUTO_PRECO - (double)$item->Produto->PRODUTO_DESC;
-        @endphp
+
+
+        <p class="card-text">R$ {{$item->Produto->PRODUTO_DESCONTO}}</p>
+        <p class="card-text">qtd {{$item->ITEM_QTD}}</p>
+
+</div>
+
       </div>
     </div>
   </div>
 </div>
 
-
-
 @endforeach
-
-
+<div class="card">
+<div class="card-body">
+  {{$total}}
+  </div>
 </div>
 </div>
+
+<form action="{{route('pedido.checkout')}}"  method="POST">
+                      @csrf
+                      <button type="submit" class="btn btn-dark btn-block btn-lg"
+                        data-mdb-ripple-color="dark">Finalizar</button></form>
 
 @endsection

@@ -25,21 +25,27 @@
                 window.location = `/produto/${idProduto}`;
             }
         </script>
-    @foreach($produtos as $produto)
-      <li>
 
-      <div class="card m-3">
-      <img src="{{$produto->getImagem()}}" alt="..." width="700" height="750" class="card-img-top">
-    <div class="card-body">
-      <h5 class="card-title" style="color:black">{{$produto->PRODUTO_NOME}}</h5>
-      <p class="card-text" style="color:black">R$ {{$produto->PRODUTO_PRECO}}</p>
-    </div>
-    <div class="card-footer justify-content-center">
-    <button type="button" class="btn btn-warning  justify-content-center" onclick="mostrarProduto({{$produto->PRODUTO_ID}});">Ver Mais</button>
-    </div>
-  </div>
-      </li>
-      @endforeach
+@php $count = 0; @endphp
+@foreach($produtos as $produto)
+  @if($count < 6)
+    <li>
+         <div class="card m-3">
+                 <img src="{{$produto->getImagem()}}" alt="..." class="card-img-top"><br>
+                    <div class="card-body">
+                        <h5 class="card-title" style="color:black">{{$produto->PRODUTO_NOME}}</h5>
+                            <p class="card-text" style="color:black">R$ {{$produto->PRODUTO_PRECO}}</p>
+                        </div>
+        <div class="card-footer justify-content-center">
+          <button type="button" class="btn btn-warning justify-content-center" onclick="mostrarProduto('{{ $produto->PRODUTO_ID }}');">Ver Mais</button>
+        </div>
+      </div>
+    </li>
+             @php $count++; @endphp
+        @else
+    @break
+  @endif
+@endforeach
 
     </ul>
   </article>

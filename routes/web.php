@@ -4,11 +4,13 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProdutoController;
 use App\Http\Controllers\CarrinhoController;
-
-
-
+use App\HttP\Controllers\PedidoController;
+use App\Http\Controllers\EnderecoController;
 
 Route::get('/', [ProdutoController::class,'index']);
+
+Route::get('/endereco' , [EnderecoController::class, 'index'])->name('endereco.index');
+Route::post('/endereco' , [EnderecoController::class, 'save'])->name('endereco.save');
 
 
 Route::post('/carrinho/{produto}',[CarrinhoController::class, 'store'])->name('carrinho.store');
@@ -39,3 +41,8 @@ Route::get('/produtos', function () {
 Route::get('/produto',[ProdutoController::class,'index']);
 Route::get('/produto/{produto}' ,  [ProdutoController::class,'show']);
 require __DIR__.'/auth.php';
+
+
+Route::post('/pedido',[PedidoController::class,'checkout'])->name('pedido.checkout');
+Route::get('/pedido',[PedidoController::class,'index'])->name('pedido.index');
+Route::get('/pedido/{pedido}',[PedidoController::class,'show'])->name('pedido.show');

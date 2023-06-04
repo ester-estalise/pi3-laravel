@@ -11,10 +11,13 @@
     </div>
     <div class="bicicleta container">
       <div class="bicicleta-imagens">
-      @foreach($produto->ProdutoImagem as $imagem )
-          <!--<p>{{$imagem->IMAGEM_URL}}</p>-->
-          <img src="{{$imagem->IMAGEM_URL}}">
-          @endforeach
+      @foreach($produto->ProdutoImagem as $index => $imagem)
+  @if($index === 0)
+    <!--<p>{{$imagem->IMAGEM_URL}}</p>-->
+    <img src="{{$imagem->IMAGEM_URL}}">
+  @endif
+@endforeach
+
 
 
       </div>
@@ -40,28 +43,6 @@
 
 
   </main>
-
-
-  <article class="bicicletas-lista container">
-    <h2 class="font-1-xxl">escolha a sua<span class="cor-p1">.</span></h2>
-
-    <ul>
-      <li>
-        <a href="./nimbus.html">
-          <img src="../img/teclas/piano/piano.jpg" alt="Bicicleta preta">
-          <h3 class="font-1-xl">Piano Yamaha</h3>
-          <span class="font-2-m cor-8">R$ 4999</span>
-        </a>
-      </li>
-      <li>
-        <a href="./teclado.html">
-
-          <h3 class="font-1-xl">Teclado Yamaha</h3>
-          <span class="font-2-m cor-8">R$ 3999</span>
-        </a>
-      </li>
-    </ul>
-  </article>
 
 
 
