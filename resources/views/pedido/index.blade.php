@@ -2,11 +2,8 @@
 @extends('layouts.app')
 @section('main')
 
+
 @foreach($pedidos as $pedido)
-
-
-
-
 
 <div class="card-group">
   <div class="card">

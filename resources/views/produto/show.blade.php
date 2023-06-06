@@ -14,7 +14,7 @@
       @foreach($produto->ProdutoImagem as $index => $imagem)
   @if($index === 0)
     <!--<p>{{$imagem->IMAGEM_URL}}</p>-->
-    <img src="{{$imagem->IMAGEM_URL}}">
+    <img style="width: 300px;height:350px" src="{{$imagem->IMAGEM_URL}}">
   @endif
 @endforeach
 
@@ -34,9 +34,9 @@
 
           <span class="font-1-xs cor-6"><img src="../img/icones/entrega.svg" alt=""> entrega em 5 dias</span>
           @if($produto->ProdutoEstoque)
-          <span class="font-1-xs cor-6"><img src="../img/icones/estoque.svg" alt=""> {{$produto->ProdutoEstoque->PRODUTO_QTD}}</span>
+          <span class="font-1-xs cor-6" style="margin-left:105%;margin-top:-20px"><img src="../img/icones/estoque.svg" alt=""> {{$produto->ProdutoEstoque->PRODUTO_QTD}}</span>
           @else
-          <span class="font-1-xs cor-6"><img src="../img/icones/estoque.svg" alt="">sem estoque</span>
+          <span class="font-1-xs cor-6" style="margin-left:105%;margin-top:-20px"><img src="../img/icones/estoque.svg" alt="">sem estoque</span>
           @endif
 
         </div>

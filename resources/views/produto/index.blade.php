@@ -11,7 +11,7 @@
       </div>
       <picture>
         <source media="(max-width: 800px)" srcset="./img/bicicletas/nimbus.jpg">
-        <img src="./img/fotos/inicial.jpg" width="1280" height="1600" alt="Bicicleta elétrica preta.">
+        <img src="/img/fotos/inicial.jpg" width="1280" height="1600" alt="Bicicleta elétrica preta.">
       </picture>
     </div>
   </main>
@@ -35,7 +35,7 @@
                     <div class="card-body">
                         <h5 class="card-title" style="color:black">{{$produto->PRODUTO_NOME}}</h5>
                             <p class="card-text" style="color:black">R$ {{$produto->PRODUTO_PRECO}}</p>
-                        </div>
+                  </div>
         <div class="card-footer justify-content-center">
           <button type="button" class="btn btn-warning justify-content-center" onclick="mostrarProduto('{{ $produto->PRODUTO_ID }}');">Ver Mais</button>
         </div>

@@ -11,6 +11,7 @@ Route::get('/', [ProdutoController::class,'index']);
 
 Route::get('/endereco' , [EnderecoController::class, 'index'])->name('endereco.index');
 Route::post('/endereco' , [EnderecoController::class, 'save'])->name('endereco.save');
+Route::get('/produtos', [ProdutoController::class, 'produtos'])->name('produtos');
 
 
 Route::post('/carrinho/{produto}',[CarrinhoController::class, 'store'])->name('carrinho.store');
@@ -40,6 +41,7 @@ Route::get('/produtos', function () {
 
 Route::get('/produto',[ProdutoController::class,'index']);
 Route::get('/produto/{produto}' ,  [ProdutoController::class,'show']);
+Route::get('/produto/produtos',[ProdutoController::class,'produtos']);
 require __DIR__.'/auth.php';
 
 
